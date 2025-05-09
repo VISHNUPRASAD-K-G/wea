@@ -77,7 +77,7 @@ function weatherDisply(){
             const bg_img_container = document.getElementById('bg_img_container');
             // if((time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))){
             bg_img_container.style.backgroundImage = "url('https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif')";
-            console.log("dark mode on.");
+            console.log("darked mode on.");
             //     bg_img_container.style.backgroundSize = 'cover';
             //     bg_img_container.style.width='100%';
             //     bg_img_container.style.height='100vh';
