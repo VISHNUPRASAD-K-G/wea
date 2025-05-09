@@ -77,7 +77,7 @@ function weatherDisply(){
 
             // weather_containers.style.display = 'block';
 
-            bg_img(wea_desc, crnt_temp, weather_name,crnt_time);
+            // bg_img(wea_desc, crnt_temp, weather_name,crnt_time);
 
             item_container.innerHTML = `
             <!-- Main Weather contents -->
