@@ -75,7 +75,7 @@ function weatherDisply(){
               
             crnt_time = getTimeFromOffsetSeconds(items.timezone);
 
-            weather_containers.style.display = 'block';
+            // weather_containers.style.display = 'block';
 
             bg_img(wea_desc, crnt_temp, weather_name,crnt_time);
 
