@@ -81,7 +81,7 @@ function weatherDisply(){
 
             item_container.innerHTML = `
             <!-- Main Weather contents -->
-            <div class="p-3 d-flex align-items-center  flex-column rounded-3" style="width: 500px; box-shadow: 3px 3px 10px black; color: white; background: rgba(250,250,250,.25);">
+            <div class="z-1 p-3 d-flex align-items-center  flex-column rounded-3" style="width: 500px; box-shadow: 3px 3px 10px black; color: white; background: rgba(250,250,250,.25);">
                 <h3>Current Weather</h3>
                 <div class="w-100 d-flex justify-content-between py-3">
                     <p>City: ${city}</p>
@@ -98,7 +98,7 @@ function weatherDisply(){
             </div>
 
             <!-- footer weather contents -->
-            <div class="w-100">
+            <div class="w-100 z-1">
                 <div class="container-fluid d-flex align-items-center justify-content-center mt-5">
                     <div class="row w-100">
                         <div class="col">
