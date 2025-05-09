@@ -1,43 +1,43 @@
-function bg_img(wea_desc, crnt_temp, weather_name, crnt_time){
-    const time = crnt_time.split(' ');
-    console.log(time[0][0], time[0].split(':')[0]);
-    tm = time[0].split(':')[0];
-    if((time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))){
-        bg_img_container.style.backgroundImage = 'url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif)';
+// function bg_img(wea_desc, crnt_temp, weather_name, crnt_time){
+//     const time = crnt_time.split(' ');
+//     console.log(time[0][0], time[0].split(':')[0]);
+//     tm = time[0].split(':')[0];
+//     if((time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))){
+//         bg_img_container.style.backgroundImage = 'url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif)';
         
-    }
-    else if(crnt_temp>=38){
-        bg_img_container.style.backgroundImage = 'url(https://img.freepik.com/premium-photo/heatwave-hot-sun-landscape-extreme-hot-weather-climate-change-global-warming-background_210545-2599.jpg)';
-    }
-    else if(crnt_temp<0){
-        bg_img_container.style.backgroundImage = 'url(https://i.pinimg.com/originals/54/67/27/546727d1854d11df8c148ecd113a7cfb.gif)';
-    }
-    else if(crnt_temp >= 0 && crnt_temp < 10){
-        bg_img_container.style.backgroundImage = 'url(https://i.pinimg.com/originals/8b/52/ab/8b52abc5c7e4f765c90d020f6b2078db.gif)'
-    }
-    else if(wea_desc == 'overcast clouds'){
-        bg_img_container.style.backgroundImage = 'url(https://i.pinimg.com/originals/3e/8a/3f/3e8a3fe70d20e25055fba789d559cbaf.gif)';
-    }
-    else if(wea_desc == 'broken clouds'){
-        bg_img_container.style.backgroundImage = 'url(https://i.gifer.com/srG.gif)';
-    }
-    else if(wea_desc == 'clear sky'){
-        bg_img_container.style.backgroundImage = 'url(https://i.gifer.com/Lx0q.gif)'
-    }
+//     }
+//     else if(crnt_temp>=38){
+//         bg_img_container.style.backgroundImage = 'url(https://img.freepik.com/premium-photo/heatwave-hot-sun-landscape-extreme-hot-weather-climate-change-global-warming-background_210545-2599.jpg)';
+//     }
+//     else if(crnt_temp<0){
+//         bg_img_container.style.backgroundImage = 'url(https://i.pinimg.com/originals/54/67/27/546727d1854d11df8c148ecd113a7cfb.gif)';
+//     }
+//     else if(crnt_temp >= 0 && crnt_temp < 10){
+//         bg_img_container.style.backgroundImage = 'url(https://i.pinimg.com/originals/8b/52/ab/8b52abc5c7e4f765c90d020f6b2078db.gif)'
+//     }
+//     else if(wea_desc == 'overcast clouds'){
+//         bg_img_container.style.backgroundImage = 'url(https://i.pinimg.com/originals/3e/8a/3f/3e8a3fe70d20e25055fba789d559cbaf.gif)';
+//     }
+//     else if(wea_desc == 'broken clouds'){
+//         bg_img_container.style.backgroundImage = 'url(https://i.gifer.com/srG.gif)';
+//     }
+//     else if(wea_desc == 'clear sky'){
+//         bg_img_container.style.backgroundImage = 'url(https://i.gifer.com/Lx0q.gif)'
+//     }
     
-    else if(weather_name == 'Rain'){
-        bg_img_container.style.backgroundImage = 'url(https://cdn.pixabay.com/animation/2023/03/26/01/15/01-15-42-612_512.gif)'
-    }
-    else if(crnt_temp >=10 && crnt_temp<20){
-        bg_img_container.style.backgroundImage = 'url(https://assets.odishabytes.com/wp-content/uploads/2019/11/winter.jpg)'
-    }
-    else if(crnt_temp >=30 && crnt_temp<38){
-        bg_img_container.style.backgroundImage = 'url(https://img.freepik.com/premium-photo/summer-meadow-bright-sunny-day-3d-illustration_433905-168.jpg?w=360)'
-    }
-    else{
-        bg_img_container.style.backgroundImage = 'url(https://cdn.pixabay.com/animation/2023/03/11/17/29/17-29-27-410_512.gif)';
-    }
-}
+//     else if(weather_name == 'Rain'){
+//         bg_img_container.style.backgroundImage = 'url(https://cdn.pixabay.com/animation/2023/03/26/01/15/01-15-42-612_512.gif)'
+//     }
+//     else if(crnt_temp >=10 && crnt_temp<20){
+//         bg_img_container.style.backgroundImage = 'url(https://assets.odishabytes.com/wp-content/uploads/2019/11/winter.jpg)'
+//     }
+//     else if(crnt_temp >=30 && crnt_temp<38){
+//         bg_img_container.style.backgroundImage = 'url(https://img.freepik.com/premium-photo/summer-meadow-bright-sunny-day-3d-illustration_433905-168.jpg?w=360)'
+//     }
+//     else{
+//         bg_img_container.style.backgroundImage = 'url(https://cdn.pixabay.com/animation/2023/03/11/17/29/17-29-27-410_512.gif)';
+//     }
+// }
 
 function weatherDisply(){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&appid=e30b4f2947d41f879d186d6580324348`).then((response)=>{
