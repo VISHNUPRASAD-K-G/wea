@@ -72,16 +72,16 @@ function weatherDisply(){
             }
               
             crnt_time = getTimeFromOffsetSeconds(items.timezone);
-            const time = crnt_time.split(' ');
-            tm = time[0].split(':')[0];
-            if((time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))){
+            // const time = crnt_time.split(' ');
+            // tm = time[0].split(':')[0];
+            if(wea_desc == 'scattered clouds'){
                 bg_img_container.style.backgroundImage = "url('https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif')";
             }
             else{
                 bg_img_container.style.backgroundImage = "url('https://cdn.pixabay.com/animation/2023/03/11/17/29/17-29-27-410_512.gif')";
             }
             // weather_containers.style.display = 'block';
-            console.log("hai Every one");
+            console.log("Every one");
             // bg_img(wea_desc, crnt_temp, weather_name,crnt_time);
 
             item_container.innerHTML = `
