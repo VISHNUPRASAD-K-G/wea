@@ -1,11 +1,11 @@
 function bg_img(wea_desc, crnt_temp, weather_name, crnt_time){
     const time = crnt_time.split(' ');
-    // tm = time[0].split(':')[0];
-    // tms = (time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))
-    // if(tms){
-    //     bg_img_container.style.backgroundImage = 'url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif)';  
-    // }
-    if(crnt_temp>=38){
+    tm = time[0].split(':')[0];
+    tms = (time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))
+    if(tms){
+        bg_img_container.style.backgroundImage = 'url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif)';  
+    }
+    else if(crnt_temp>=38){
         bg_img_container.style.backgroundImage = 'url(https://img.freepik.com/premium-photo/heatwave-hot-sun-landscape-extreme-hot-weather-climate-change-global-warming-background_210545-2599.jpg)';
     }
     else if(crnt_temp<0){
@@ -69,7 +69,8 @@ function weatherDisply(){
                 const now = new Date();
                 const utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
                 const localTime = new Date(utcTime + offsetSeconds  * 1000);
-                return localTime.toLocaleTimeString();
+                // return localTime.toLocaleTimeString();
+                return localTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
             }
               
             crnt_time = getTimeFromOffsetSeconds(items.timezone);
@@ -82,7 +83,7 @@ function weatherDisply(){
             //     bg_img_container.style.backgroundImage = "url('https://cdn.pixabay.com/animation/2023/03/11/17/29/17-29-27-410_512.gif')";
             // }
             // weather_containers.style.display = 'block';
-            console.log("ones");
+            console.log("Hello guys");
             bg_img(wea_desc, crnt_temp, weather_name,crnt_time);
 
             item_container.innerHTML = `
